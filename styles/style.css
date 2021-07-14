@@ -4,22 +4,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap');
 /* fonts live button */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
-body{
-    width: 1440px;
+
+ body{
+     width: 1440px;
     height: 3750px;
     background: #FFFFFF;
-    margin: 0;
-    padding: 0;
-}
+    align-items: center;
+   
+} 
 main{
+    align-items: center;
+}
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 /* top banner styles */
 .top-banner{
-    width: 1440px;
-    height: 677px;
+     min-width: 1440px;
+    min-height: 677px; 
     background-color:#2D25A0;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -52,7 +56,7 @@ main{
    
     
 }
-.banner-detail:hover .banner-button{
+.top-banner:hover .banner-button{
     transform: rotate(360deg) scale(1.5);
     background-color: violet;
    
@@ -72,7 +76,7 @@ main{
 }
 
 
-/* players section styles */
+/* players styles */
 .players{
     display: grid;
     grid-template-columns:repeat(3,1fr) ;
@@ -130,10 +134,11 @@ main{
 .trophy-and-schedule{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    justify-content: space-between;
+    grid-column-gap: 30px;
+    grid-row-gap: 60px; 
 }
 /* match-fixture styles */
-.match-fixure{
+.trophy{
     width: 400px;
     height: 500px;
     border: 3px solid whitesmoke;
@@ -142,30 +147,26 @@ main{
     margin: 5px;
     overflow: hidden;
 }
-.match-fixure:hover .fixture-date{
+.trophy:hover .match-date{
     display: block;
     background-color: rgba(226, 196, 156, 0.416);
 }
-.match-fixure:hover .trophy{
+.trophy:hover .trophy-photo{
     transform: scale(1.5) rotate(360deg);
     transition: transform 2s ease-in-out;
 }
-.trophy img{
+.trophy-photo img{
     width:100% ;
-    border-radius: 10px;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-   
-    
-
+    border-radius: 10px;  
 }
-.fixture-date{
+.match-date{
     display: none;
    
     position: absolute;
     width: 400px;
     top: 0;
 }
-.fixture-date h1{
+.match-date h1{
     background-color: rgba(68, 58, 58, 0.83);
     color: white;  
     text-align: center;
@@ -177,7 +178,6 @@ table{
     width: 500px;
     height: 500px;
     border-collapse: collapse;
-    /* border: 2px solid gray; */
 }
 tbody td,th{
     border: 1px solid rgba(128, 128, 128, 0);
@@ -193,7 +193,41 @@ thead th{
 tbody td{
     background-color: lightsteelblue;
 }
+/* youtube button styles */
+.youtube-button{
+    margin-top: 100px;
+    font-size: 50px;
+}
+.youtube-button i{
+    font-size: 50px;
+    color: red;
+}
+/* login form styles */
 
+.login-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.login-form{
+    display: flex;
+    flex-direction:column;
+    
+}
+
+.login-form input,button{
+    font-size: 30px;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.login-form button{
+    background-color:gray;
+    color: wheat;
+    font-weight: 600;
+    padding: 5px;
+    font-size: 30px;
+}
 /* footer styles */
 .footer{
     width: 483.87px;
@@ -224,8 +258,6 @@ tbody td{
     height: 32px;
     align-self: center;
     font-size: 25px;
-   /* margin-top: 10px; */
-   /* margin-bottom: 20px; */
    margin-right: 7px;
 }
 .copyright{
@@ -236,5 +268,43 @@ tbody td{
     margin-left: 310px;
     margin-top: 10px; 
 }
+/*----------
+ Media Queries 
+---------------*/
+/* mobile device */
 
-   
+ @media only screen and (max-width:688px) {
+     .container{
+         width: 100%;
+     }
+     .players,.trophy-and-schedule,.top-banner{
+         grid-template-columns: repeat(1,1fr);
+         align-items: center;
+         
+     }
+   .trophy-and-schedule,.players{
+        flex-direction: column;
+        align-items: center;
+     }
+     
+
+     
+ }  
+ /* tablet decvice */
+ /* @media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players,.trophy-and-schedule,.top-banner{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        
+    }
+  .trophy-and-schedule,.players{
+       flex-direction: column;
+       align-items: center;
+    }
+    
+
+    
+} */
