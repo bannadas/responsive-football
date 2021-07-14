@@ -9,12 +9,9 @@
      width: 1440px;
     height: 3750px;
     background: #FFFFFF;
-    align-items: center;
-   
+       
 } 
-main{
-    align-items: center;
-}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -290,14 +287,14 @@ tbody td{
 
      
  }  
- /* tablet decvice */
- /* @media only screen and (min-width:688px) and (max-width:992px) {
+  /* tablet device 
+  @media only screen and (min-width:688px) and (max-width:992px) {
     .container{
         width: 100%;
     }
     .players,.trophy-and-schedule,.top-banner{
         grid-template-columns: repeat(2,1fr);
-        align-items: center;
+        
         
     }
   .trophy-and-schedule,.players{
@@ -307,4 +304,4 @@ tbody td{
     
 
     
-} */
+}  */
