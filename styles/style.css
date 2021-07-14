@@ -49,11 +49,13 @@ main{
     padding: 12px 24px ;
     text-align: center;
     transition: transform 2s ease-in-out; 
+   
     
 }
 .banner-detail:hover .banner-button{
     transform: rotate(360deg) scale(1.5);
     background-color: violet;
+   
    
 }
 .banner-detail i{
@@ -123,5 +125,47 @@ main{
     color:#6C6C6C;
     margin: 10px 15px 24px;
 
+}
+/* footer styles */
+.footer{
+    width: 483.87px;
+    height: 250px;
+    margin-left: 300px;
+    margin-right: 481.13px;
+    margin-top: 158px;
+    margin-bottom: 63px;
+    
+}
+.football-logo img {
+    width: 483px;
+    height: 110px;
+    
+    margin-left: 150px; 
+    margin-bottom: 10px;   
+    
+}
+.social-media-icons{
+    width: 170px;
+    height: 44px;
+    margin-left: 350px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.fab{
+    width: 32px;
+    height: 32px;
+    align-self: center;
+    font-size: 25px;
+   /* margin-top: 10px; */
+   /* margin-bottom: 20px; */
+   margin-right: 7px;
+}
+.copyright{
+    width: 250px;
+    height: 31px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-left: 310px;
+    margin-top: 10px; 
 }
    
